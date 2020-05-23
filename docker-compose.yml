@@ -1,0 +1,22 @@
+version: "3"
+networks:
+  temp-network:
+services:
+  mro:
+    env_file: .env
+    image: mariadb-redis-openjdk8:latest
+    container_name: mro
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    restart: unless-stopped
+    ports:
+      - 3306:3306
+      - 6379:6379
+    environment:
+      - MYSQL_ROOT_PASSWORD=24945000
+      - MYSQL_DATABASE=mro
+      - MYSQL_USER=mro
+      - MYSQL_PASSWORD=mro
+    networks:
+      - temp-network
+  

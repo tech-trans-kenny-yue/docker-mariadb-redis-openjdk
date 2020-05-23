@@ -1,0 +1,1 @@
+docker run --name test-mariadb-redis-openjdk8 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=24945000 mariadb-redis-openjdk8:latest
