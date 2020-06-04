@@ -1,4 +1,4 @@
-FROM mariadb:latest
+FROM mariadb:10.4.13
 
 RUN apt-get update && apt-get install -y \
     openjdk-8-jdk \
